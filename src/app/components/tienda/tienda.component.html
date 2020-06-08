@@ -1,0 +1,60 @@
+<div class="col-lg-12" [@fadeIn]>
+    <a class="btn_activo btn btn-success" [@marcar]="status" (click)="cambiarEstado(status)">
+        <span *ngIf="status == 'inactive'">Boton inactivo</span>
+        <span *ngIf="status == 'active'">Boton activado</span>
+    </a>
+
+    <hr>
+    <h4>Animaciones CCS3</h4>
+    <a class="btn_transiciones">Transiciones</a>
+
+    <div class="clearfix"></div>
+    <div class="caja_animada"></div>
+
+    <hr>
+    <button id="botonjq">Mostrar textos</button>
+    <p id="textjq" class="alert alert-warning">Probando jquery</p>
+
+    Padre:
+    <h1> {{titulo}} </h1>
+    <ul>
+        <li>Camiseta rosa</li>
+        <li>Gorra negra</li>
+    </ul>
+
+    <hr/>
+
+    <p>
+        Nombre del parque:
+        <input type="text" [(ngModel)] = "nombreDelParque" (keyup)="mostrarNombre()"/>
+    </p>
+
+    <p>
+        Resultado: {{nombreDelParque}}
+    </p>
+
+    <div *ngIf="miParque">
+        <h4>Datos de miParque desde el hijo</h4>
+        <ol>
+            <li>{{miParque.nombre}}</li>
+            <li>{{miParque.metros}}</li>
+            <li>{{miParque.vegetacion}}</li>
+            <li>{{miParque.abierto}}</li>
+        </ol>
+    </div>
+
+    <hr>
+
+    <parques [nombre]="'Nombre por defecto'" 
+                [metros_cuadrados]="777"
+                (pasameLosDatos)="verDatosParque($event)"></parques>
+
+    <hr>
+    <p *ngIf="nombreDelParque">
+        Hijo:
+        <parques [nombre]="nombreDelParque" 
+                [metros_cuadrados]="666"
+                (pasameLosDatos)="verDatosParque($event)"></parques>
+    </p>
+    <hr>
+</div>
