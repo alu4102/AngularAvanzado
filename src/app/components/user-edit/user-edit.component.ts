@@ -21,7 +21,7 @@ export class UserEditComponent implements OnInit {
     public url: string;
 
     constructor(private _userService: UserService, private _uploadService: UploadService) {
-        this.title = 'Actualizar mis datos';
+        this.title = 'Update your data';
         this.identity = this._userService.getIdentity();
         this.token = this._userService.getToken();
         this.user = this.identity;

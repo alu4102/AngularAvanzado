@@ -20,12 +20,13 @@ export class EditComponent implements OnInit {
   public url;
   public status;
   public is_edit;
+  public boton_text = "Edit";
 
   constructor(private _route: ActivatedRoute, private _router: Router,
     private _userService: UserService, private _animalService: AnimalService,
     private _uploadService: UploadService) {
 
-    this.title = 'Edit';
+    this.title = 'Edit the selected animal';
     this.token = this._userService.getToken();
     this.animal = new Animal('', '', '', 2020, '', '');
     this.url = GLOBAL.url;

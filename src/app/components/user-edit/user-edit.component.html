@@ -39,6 +39,6 @@
             <label>Upload your avatar</label>
             <input type="file" placeholder="Upload image" (change)="fileChangeEvent($event)">
         </p>
-        <input type="submit" value="{{title}}" class="btn btn-primary" [disabled] = "!userEditForm.form.valid">
+        <input type="submit" value="Update" class="btn btn-primary" [disabled] = "!userEditForm.form.valid">
     </form>
 </div>

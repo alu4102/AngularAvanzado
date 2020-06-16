@@ -23,12 +23,13 @@ export class AddComponent {
   public token;
   public url;
   public status;
+  public boton_text = "Add";
 
   constructor(private _route: ActivatedRoute, private _router: Router,
     private _userService: UserService, private _animalService: AnimalService,
     private _uploadService: UploadService) {
 
-    this.title = 'Add';
+    this.title = 'Add a new Animal';
     this.animal = new Animal('', '', '', 2020, '', '');
     this.identity = this._userService.getIdentity();
     this.token = this._userService.getToken();

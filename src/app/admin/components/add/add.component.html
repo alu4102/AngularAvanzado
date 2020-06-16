@@ -22,17 +22,18 @@
             <span *ngIf="!year.valid && year.touched">The year is compulsory</span>
         </p>
 
+        <label>Animal image</label>
         <div *ngIf="is_edit && animal.image">
             <div class="image_for_edit">
                 <img src="{{url + 'get-image-animal/' + animal.image }}">
             </div>
         </div>
+        <br>
         <p>
-            <label>Animal image</label>
             <input type="file" placeholder="Upload image..." (change)="fileChangeEvent($event)">
         </p>
 
-        <input type="submit" value="{{title}}" class="btn btn-success">
+        <input type="submit" value="{{boton_text}}" class="btn btn-success">
 
     </form>
 </div>
