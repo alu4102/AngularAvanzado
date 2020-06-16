@@ -14,7 +14,7 @@ import { Animal } from '../../../models/animal';
   providers: [UserService, AnimalService, UploadService],
 })
 export class EditComponent implements OnInit {
-  title = 'Add';
+  public title: string;
   public animal: Animal;
   public token;
   public url;
@@ -25,7 +25,7 @@ export class EditComponent implements OnInit {
     private _userService: UserService, private _animalService: AnimalService,
     private _uploadService: UploadService) {
 
-    this.title = 'Editar';
+    this.title = 'Edit';
     this.token = this._userService.getToken();
     this.animal = new Animal('', '', '', 2020, '', '');
     this.url = GLOBAL.url;

@@ -17,7 +17,7 @@ import { fadeLateral } from '../../animation';
   animations: [fadeLateral]
 })
 export class AddComponent {
-  title = 'Add';
+  public title: string;
   public animal: Animal;
   public identity;
   public token;

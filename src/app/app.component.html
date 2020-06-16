@@ -37,13 +37,13 @@
             </ul>
             <ul class="nav navbar-nav navbar-right" *ngIf="!identity">
                 <li>
-                    <a [routerLink]="['/register']" [routerLinkActive]="['active']">
+                    <a [routerLink]="['/register']" [routerLinkActive]="['active']" class="dropdown-toggle">
                         <span class="glyphicon glyphicon-user"></span>
                         Registro
                     </a>
                 </li>
                 <li>
-                    <a [routerLink]="['/login']" [routerLinkActive]="['active']">
+                    <a [routerLink]="['/login']" [routerLinkActive]="['active']" class="dropdown-toggle">
                         <span class="glyphicon glyphicon-log-in"></span>
                         Login
                     </a>
